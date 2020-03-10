@@ -1,5 +1,5 @@
 # Base image:
-FROM ruby:2.7.0
+FROM ruby:2.6.5
 
 # Install dependencies
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev default-mysql-client apt-transport-https ca-certificates unzip xvfb
