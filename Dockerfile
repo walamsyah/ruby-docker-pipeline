@@ -1,5 +1,5 @@
 # Base image:
-FROM ruby:2.7.0
+FROM ruby:2.7.0-slim
 
 # Install dependencies
 RUN apt-get update -qq \
@@ -7,6 +7,6 @@ RUN apt-get update -qq \
   && rm -rf /var/lib/apt/lists/*
 
 # Install nodejs and yarn
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install -y --no-install-recommends nodejs
-RUN npm install --global yarn
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+  && apt-get install -y --no-install-recommends nodejs \
+  && npm install --global yarn
