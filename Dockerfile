@@ -3,7 +3,7 @@ FROM ruby:2.7.0-slim
 
 # Install dependencies
 RUN apt-get update -qq \
-  && apt-get install -y build-essential libpq-dev default-mysql-client apt-transport-https ca-certificates unzip xvfb \
+  && apt-get install -y build-essential libpq-dev default-mysql-client apt-transport-https ca-certificates unzip xvfb curl \
   && rm -rf /var/lib/apt/lists/*
 
 # Install nodejs and yarn
