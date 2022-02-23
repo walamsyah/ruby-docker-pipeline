@@ -1,5 +1,5 @@
 # Base image:
-FROM ruby:2.7.2-slim
+FROM ruby:3.1.1-slim
 
 # Install dependencies
 RUN apt-get update -qq \
